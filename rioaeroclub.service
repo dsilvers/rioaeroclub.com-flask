@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve rioaeroclub.com
+After=network.target
+
+[Service]
+User=dan
+Group=www-data
+WorkingDirectory=/home/dan/rioaeroclub
+Environment="PATH=/home/dan/.virtualenvs/rio/bin"
+ExecStart=/home/dan/.virtualenvs/rio/bin/uwsgi --ini wsgi.ini
+
+[Install]
+WantedBy=multi-user.target
