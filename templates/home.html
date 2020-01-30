@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Rio Aero Club - Flying Club - Rio, WI{% endblock %}
+{% block content %}
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('/static/images/home1.jpg');">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Pancake Breakfast</h1>
+            <p>Make plans to join us for breakfast on Sunday, June 28th, 2020. Rain of shine!</p>
+            <p><a class="btn btn-lg btn-primary" href="{{ url_for('pancakes') }}" role="button">View Facebook Event</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('/static/images/aircraft1.jpg');">
+        <div class="container">
+          <div class="carousel-caption" >
+            <h1>Membership</h1>
+            <p>Rio Aero Club Membership offers affordable access to tailwheel flying from our public grass airport (94C), pilot comradery and social events.</p>
+            <p><a class="btn btn-lg btn-primary" href="{{ url_for('membership') }}" role="button">View Details</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('/static/images/home3.jpg');">
+        <div class="container">
+          <div class="carousel-caption text-right" >
+            <h1>Airport Information</h1>
+            <p>View field condition cameras, maps and photos of the field.</p>
+            <p><a class="btn btn-lg btn-primary" href="{{ url_for('airport') }}" role="button">Airport Information</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    <hr class="featurette-divider">
+
+{% endblock %}

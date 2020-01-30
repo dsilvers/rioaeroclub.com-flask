@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}Airport Cameras - Rio Aero Club{% endblock %}
+{% block content %}
+
+<div class="container marketing" style="margin-top: 30px;">
+  <div class="container">
+        <div class="row">
+            <div class="col">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <div id="b2827d68-2fff-4059-901d-18758966a371" class="camera-item">
+                    <a href='#' class="zoom">
+                      <img src='' alt='' class='camera-image'>
+                    </a>
+                    <div class="footer">
+                        <span class="clock"></span>
+                        <span class="date"></span>
+                        <span class="name"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <div id="ae8024ba-eee4-4f33-af11-fcb246cf7038" class="camera-item">
+                    <a href='#' class="zoom">
+                      <img src='' alt='' class='camera-image'>
+                    </a>
+                    <div class="footer">
+                        <span class="clock"></span>
+                        <span class="date"></span>
+                        <span class="name"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+ 
+            <div class="col">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <div id="ccdecacd-21bb-4721-9d25-44d952c44317" class="camera-item">
+                    <a href='#' class="zoom">
+                      <img src='' alt='' class='camera-image'>
+                    </a>
+                    <div class="footer">
+                        <span class="clock"></span>
+                        <span class="date"></span>
+                        <span class="name"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+
+</div>
+{% endblock %}
+
+
+
+{% block js %}
+
+    <script type='text/javascript'>
+
+    function get_image() {
+      cameras = document.querySelectorAll('.camera-item')
+
+      cameras.forEach(function(camera) {
+        id = camera.getAttribute('id');
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 
+          'https://southramp.com/camera/' + id + '/' + camera.offsetWidth + '/0',
+          true);
+
+        request.onload = function() {
+          if (request.status >= 200 && request.status < 400) {
+            // Success!
+            var data = JSON.parse(request.responseText);
+            camera.querySelector('img').src = 'https://southramp.com' + data.image;
+            camera.querySelector('.clock').innerHTML = data.clock + ' - ';
+            //camera.querySelector('.date').innerHTML = data.date;
+            camera.querySelector('.name').innerHTML = data.name;
+            camera.querySelector('.zoom').setAttribute('href', 'https://southramp.com' + data.enhance)
+
+            el = camera.querySelector('.clock');
+            if(data.late) {
+              if (el.classList)
+                el.classList.add('red');
+              else
+                el.className += ' ' + 'red';
+            } else {
+              if (el.classList)
+                el.classList.remove('red');
+              else
+                el.className = el.className.replace(new RegExp('(^|\\b)' + 'red'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');              
+            }
+
+            // if more than 5 minutes make the clock red
+            /*
+            current_time = Date.now() / 1000 | 0
+            el = document.querySelectorAll('#clock')[0];
+            if(data.timestamp < current_time - 60*5) {
+              if (el.classList)
+                el.classList.add('red');
+              else
+                el.className += ' ' + 'red';
+            }
+            else {
+              if (el.classList)
+                el.classList.remove('red');
+              else
+                el.className = el.className.replace(new RegExp('(^|\\b)' + 'red'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
+            */
+          } else {
+            // We reached our target server, but it returned an error
+          }
+        };
+
+        request.onerror = function() {
+          // There was a connection error of some sort
+        };
+
+        request.send();
+
+      });
+
+    }
+
+    get_image();
+
+
+    function debounce(func, time){
+        var time = time || 100; // 100 by default if no param
+        var timer;
+        return function(event){
+            if(timer) clearTimeout(timer);
+            timer = setTimeout(func, time, event);
+        };
+    }
+
+    // Function with stuff to execute
+    function resizeContent() {
+        // Do loads of stuff once window has resized
+        get_image();
+    }
+
+    // Eventlistener
+    window.addEventListener("resize", debounce( resizeContent, 150 ));
+    </script>
+
+
+
+{% endblock %}

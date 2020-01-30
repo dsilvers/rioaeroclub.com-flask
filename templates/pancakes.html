@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Pancake Breakfast - Rio Aero Club{% endblock %}
+{% block content %}
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('/static/images/pancakes2.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('/static/images/pancakes1.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('/static/images/pancakes3.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('/static/images/pancakes4.jpg');"></div>
+      <div class="carousel-item" style="background-image: url('/static/images/pancakes5.jpg');"></div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Rain or Shine</h2>
+            <p><strong>Sunday, June 28th, 2020<br>7:00am to Noon</strong></p>
+            <p><strong>Drive In:</strong> <a target="_blank" href="https://goo.gl/maps/ZByne3NGapgaPhEY6">W5019 Hwy 16, Rio, WI 53960</a></p>
+            <p><strong>Fly In:</strong> <a href="https://skyvector.com/airport/94C/Gilbert-Field-Airport" target="_blank">94C Airport</a></p>
+            <p><a class="btn btn-primary" href="https://www.facebook.com/events/298997154357086/" target="_blank" role="button">View Event on Facebook &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>World Famous Pancakes</h2>
+            <p><strong>$7.00</strong> for <strong>pancakes, eggs, sausage, coffee, milk or juice.</strong></p>
+            <p>Children pay less at the gate!</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>Aircraft</h2>
+            <p>Helicopter rides <i>(weather permitting)</i>.</p>
+            <p>Watch airplanes come and go while enjoying breakfast.</p>
+            <p><i>FREE</i> drawing for $100 bill, included with adult ticket.</p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="container pancake-gallery">
+
+      <p class="lead">
+        Here are a few airplanes that visited us for the 2019 Pancake Breakfast:
+      </p>
+
+      <img src="/static/images/visitors/1-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/2-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/3-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/4-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/5-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/6-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/7-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/8-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/9-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/10-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/11-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/12-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/13-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/14-sm.jpg" alt="" class="img-thumbnail">
+      <img src="/static/images/visitors/15-sm.jpg" alt="" class="img-thumbnail">
+
+    </div>
+
+
+
+{% endblock %}

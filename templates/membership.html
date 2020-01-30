@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}Membership - Rio Aero Club{% endblock %}
+{% block content %}
+
+  <div class="container marketing" style="margin-top: 50px;">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">How Do I Join Rio Aero Club?</h2>
+        <p class="lead">
+          Must be sponsored by a member in good standing. <strong>Contact us to find out when the next monthly meeting and come and introduce yourself!</strong>
+          <br>
+          <br>
+          Prospective members are usually accepted into the club at the second meeting they attend.
+
+          Two-thirds majority of voting members present required to be accepted into club.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" src="/static/images/membership1.jpg">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">How much does it cost to join?</h2>
+        <p class="lead">
+          <strong>$300 initial membership fee to join.</strong>
+          <br>
+          <br>
+          60 day probationary period. May not vote or build a hangar during the probationary period. May resign or be voted out by two-thirds majority vote with the $300 refunded.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" src="/static/images/membership2.jpg">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">How much are monthly dues?</h2>
+        <p class="lead">
+3 Classes of Membership: Active, Associate, Inactive
+<br>
+<br>
+<strong>Active:</strong> $25/month<br>
+<strong>Associate:</strong> $5/month<br>
+<strong>Inactive:</strong> no cost, ability to return to active within 5 years.<br>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" src="/static/images/membership3.jpg">
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">What are the requirements to fly the Citabria?</h2>
+        <p class="lead">
+          <ul>
+            <li>Must be an Active Member</li>
+            <li>Initial checkout with a club instructor. Typically, this is 10 hours of flying, but could vary in your situation.</li>
+            <li>Instructor hourly rates shall be negotiated with individual CFI's.</li>
+            <li>90 day club proficiency required to fly solo. Regain proficiency with a club Check Airman at no CFI cost (normal Citabria rates do apply).</li>
+            <li>Scheduling is done via first come/first served on Google Calendar.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" src="/static/images/membership4.jpg">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">What is expected of Active and Social Rio Members?</h2>
+        <p class="lead">
+          <ul>
+<li>The Annual Pancake Breakfast & Cleanup (last Sunday in June, two preceding Saturdays).</li>
+<li>Lawn mowing!</li>
+<li>Must be willing to accept nomination as an officer or director.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" src="/static/images/membership5.jpg">
+      </div>
+    </div
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Ready to join?</h2>
+        <p class="lead">
+          <a href="{{ url_for('contact') }}">Contact us</a> to let us know you are interested, then make arrangements to come to our next monthly meeting. We look forward to meeting you!
+        </p>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+{% endblock %}
